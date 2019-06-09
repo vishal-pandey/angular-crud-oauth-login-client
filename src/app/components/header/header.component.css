@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Black+And+White+Picture|Josefin+Sans');
+.header-toolbar{
+	height: 60px;
+	/*background-color: #009688;*/
+	/*background-color: rgb(251,251,255);*/
+	/*background-color: rgba(250, 99, 99, 0.7);*/
+	background-color: rgba(0, 50, 50, 0.7);
+	background: url('/assets/images/wood_pattern.png');
+	border-bottom: 1px solid lightgrey;
+}
+.status{
+	height: 20px;
+	background-color: #00796B;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	font-size: 12px;
+	color: white;
+}
+.fill{
+	flex: 1 1 auto;
+}
+
+.desktop-menu button{
+	/*color: #E0F2F1;*/
+	color: #000;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: bolder;
+	font-size: 15px;
+}
+.header-toolbar h1{
+	/*font-family: 'Black And White Picture', sans-serif;*/
+	font-family: "Raleway";
+	font-size: 30px;
+	/*font-size: 3rem;*/
+	/*color: #E0F2F1;*/
+	font-weight: bold;
+	color: black;
+	cursor: pointer;
+}
+
+.accent-color{
+	color: #4adb95;	
+}
+.v-f-r{
+	float: right;
+}
+@media screen and (max-width: 960px) {
+	.header-toolbar{
+		border-bottom: none;
+	}
+}

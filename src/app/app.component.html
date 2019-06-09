@@ -1,0 +1,80 @@
+<app-header></app-header>
+<section class="desktop" *ngIf="!mobile">
+	<section class="social-mobile">
+		<a href="#" target="_blank"><button mat-button><i class="fa fa-facebook" aria-hidden="true" style="font-size: 30px; color: #3B5998;"></i></button></a>
+		<button mat-button><i class="fa fa-twitter" aria-hidden="true" style="font-size: 30px; color: #1dcaff;"></i></button>
+		<a href="#" target="_blank"><button mat-button><i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 30px; color: #25D366;"></i></button></a>
+	</section>
+
+	<mat-sidenav-container class="example-container">
+		<mat-sidenav #sidenav mode="side" opened="true" class="desktop-sidenav" [fixedInViewport]="'Fixed'" [fixedTopGap]="'0'" [fixedBottomGap]="'0'" *ngIf="this.mS.isLoggedIn()">
+			<section class="desktop-profile">
+					<mat-icon>person</mat-icon><br>
+					<span>{{this.cokkie.get('username')}}</span>
+					<span>{{this.cokkie.get('email')}}</span>
+
+			</section>
+			<section class="hamburger-menu-content desktop-menu-content">
+
+	    		<button mat-button routerLink="/"> <mat-icon>home</mat-icon> Home <mat-icon style="float: right;margin-top: 5px;">chevron_right</mat-icon></button>
+				<button mat-button  routerLink="/list"> <mat-icon>directions_bus</mat-icon> List <mat-icon style="float: right;margin-top: 5px;">chevron_right</mat-icon></button>
+				<button mat-button  routerLink="/create"> <mat-icon>airport_shuttle</mat-icon> Create <mat-icon style="float: right;margin-top: 5px;">chevron_right</mat-icon></button>
+				<button mat-button  routerLink="/update"> <mat-icon>local_shipping</mat-icon> Update/Delete <mat-icon style="float: right;margin-top: 5px;">chevron_right</mat-icon></button>
+				<!-- <button mat-button  routerLink="/oems">OEMs <mat-icon style="float: right;margin-top: 5px;">chevron_right</mat-icon></button> -->
+				
+				<button mat-button (click)="this.mS.logout();" *ngIf="this.mS.isLoggedIn()"> <mat-icon>power_settings_new</mat-icon> Logout <mat-icon style="float: right;margin-top: 5px;">chevron_right</mat-icon></button>
+				<button mat-button  *ngIf="!this.mS.isLoggedIn()" routerLink="/"> <mat-icon>directions_bus</mat-icon> Login <mat-icon style="float: right;margin-top: 5px;">chevron_right</mat-icon></button>
+	    	</section>
+		</mat-sidenav>
+		<mat-sidenav-content>
+			<router-outlet></router-outlet>
+			
+		</mat-sidenav-content>
+	</mat-sidenav-container>
+
+</section>
+<section class="mobile" *ngIf="mobile">
+	<section class="mobile" *ngIf="mobile">
+
+	<mat-sidenav-container class="example-container">
+	    <mat-sidenav #sidenav mode="over" opened="false" class="example-sidenav" [fixedInViewport]="'Fixed'" [fixedTopGap]="'0'" [fixedBottomGap]="'0'">
+	    	<!-- <app-header></app-header> -->
+	    	<mat-toolbar class="hamburger-menu" style="background-color: #4adb95;background: url('/assets/images/wood_pattern.png'); overflow: initial;">
+	    		<span class="fill"></span>
+		      <button mat-mini-fab (click)="sidenav.toggle()" style="background-color: #4DB6AC;"><i class="fa fa-close" aria-hidden="true" style="font-size: 25px;"></i></button>
+	    	</mat-toolbar>
+	    	<section class="desktop-profile">
+				<mat-icon>person</mat-icon><br>
+				<span>{{this.cokkie.get('username')}}</span>
+				<span>{{this.cokkie.get('email')}}</span>
+
+			</section>
+	    	<section class="hamburger-menu-content">
+
+	    		<button mat-button routerLink="/" (click)="sidenav.toggle()">Home</button>
+				<button mat-button (click)="sidenav.toggle();" routerLink="/list">List</button>
+				<button mat-button (click)="sidenav.toggle();" routerLink="/list">Create</button>
+				<button mat-button (click)="sidenav.toggle();" routerLink="/list">Update/Delete</button>
+				<button mat-button (click)="this.mS.logout(); sidenav.toggle();" *ngIf="this.mS.isLoggedIn()">Logout</button>
+				<button mat-button (click)="sidenav.toggle();" *ngIf="!this.mS.isLoggedIn()" routerLink="/">Login</button>
+	    	</section>
+	    </mat-sidenav>
+
+	    <mat-sidenav-content>
+	      
+	    	<mat-toolbar class="hamburger-menu" *ngIf="this.mS.isLoggedIn()">
+	    		<span class="fill"></span>
+		      <button mat-button (click)="sidenav.toggle()"><i class="fa fa-bars" aria-hidden="true" style="font-size: 25px;"></i></button>
+	    	</mat-toolbar>
+	    	<section class="social-mobile">
+				<a href="#" target="_blank"><button mat-raised-button><i class="fa fa-facebook" aria-hidden="true" style="font-size: 25px; color: #3B5998;"></i></button></a>
+				<button mat-raised-button><i class="fa fa-twitter" aria-hidden="true" style="font-size: 25px; color: #1dcaff;"></i></button>
+				<a href="#"><button mat-raised-button><i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 25px; color: #4885ed;"></i></button></a>
+			</section>
+	      <router-outlet></router-outlet>
+	    </mat-sidenav-content>
+	</mat-sidenav-container>
+</section>
+</section>
+
+<app-footer></app-footer>

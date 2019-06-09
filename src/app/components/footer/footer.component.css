@@ -1,0 +1,16 @@
+footer{
+	background-color: #006064;
+}
+.footer-content{
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+address{
+	font-family: 'Roboto Slab', serif;
+	font-style: initial;
+	text-decoration: none;
+	text-align: center;
+	color: #E1F5FE;
+}

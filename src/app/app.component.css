@@ -1,0 +1,81 @@
+.social{
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	width: 10px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	z-index: 1000;
+}
+
+.social-mobile{
+	position: fixed;
+	bottom: 15px;
+	width: 100%;
+	height: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100000;
+}
+
+.desktop-sidenav{
+	width: 250px;
+	max-width: 40%;
+	background-color: rgba(250,250,250,1);
+	/*background-color: rgb(194, 239, 269);*/
+}
+.example-sidenav{
+	width: 60%;
+}
+.hamburger-menu{
+	height: 30px;
+	overflow: hidden;
+	background-color: #fa6263;
+	background: url('/assets/images/wood_pattern.png');
+	color: #004D40;
+	/*margin-top: -30px;*/
+	/*z-index: 10000000;*/
+}
+.fill{
+	flex: 1 1 auto;
+}
+.hamburger-menu-content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.hamburger-menu-content button{
+	width: 100%!important;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-family: 'Do Hyeon', sans-serif;
+}
+
+.desktop-menu-content button{
+	text-align: left;
+	padding-left: 25px;
+	color: #4DB6AC;
+}
+
+.desktop-menu-content button mat-icon{
+	color: #4DB6AC;
+}
+.desktop-profile{
+	height: 200px;
+	border-bottom: 1px solid lightgrey;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.desktop-profile mat-icon{
+	font-size: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}

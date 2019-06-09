@@ -1,0 +1,53 @@
+<section class="container">
+	<section class="content">
+		<mat-toolbar class="logo-container">
+			<h1 routerLink="/" class="logo">Comp<span class="accent-color">Any</span></h1>
+			<div class="links mobile-display">
+				<button mat-stroked-button class="signup-button" routerLink="/signup">SIGN UP</button>
+			</div>
+		</mat-toolbar>
+		<div class="form-container">
+			<div style="width: 100%;">
+				<h1 *ngIf="!loggingIn">
+					<div class="vicon">
+						<span></span>
+					</div>
+					<br>
+					<!-- Welcome to Detention Times : Pro -->
+					Log In
+				</h1>
+				<h1 *ngIf="loggingIn">
+					<div class="vicon">
+						<span></span>
+					</div>
+					<br>
+					Logging In ...
+				</h1>
+				<form class="login-form">
+					<!-- <mat-form-field appearance="outline"> -->
+				    	<input matInput placeholder="Username" #username class="vishal-input">
+					<!-- </mat-form-field> -->
+					<!-- <mat-form-field appearance="outline"> -->
+					    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" #password class="vishal-input">
+					    <!-- <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon> -->
+					<!-- </mat-form-field> -->
+				</form>
+				<!-- <div class="save-password"><mat-slide-toggle color="primary" labelPosition="after">Save Password</mat-slide-toggle></div> -->
+				<div class="login-buttons">
+					<button mat-stroked-button (click)="login(username.value, password.value)" style="width: 250px; ">Login</button>
+					<!-- <button mat-stroked-button routerLink="/signup">Signup</button> -->
+				</div>
+				<div class="forgot-password">
+					<a routerLink="/forgot-password">Forgot Password ?</a>
+					<a routerLink="/signup" class="computer-display"> Sign Up</a>
+				</div>
+				<div class="social-logins">
+					<!-- <button mat-stroked-button (click)="socialSignIn('google')">Login With Google</button> -->
+					<!-- <button mat-stroked-button (click)="facebookSignIn('facebook')">Login With Facebook</button> -->
+					<!-- <button mat-stroked-button (click)="lSignIn()">Login With Twitter</button> -->
+					<!-- <button mat-stroked-button (click)="linkedinSignIn('linkedin')">Login With LinkedIn</button> -->
+				</div>
+			</div>
+		</div>
+	</section>
+</section>

@@ -1,0 +1,197 @@
+h1{
+	font-size: 20px;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: white;
+}
+.login-form, .social-logins{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10px;
+}
+.login-form mat-form-field{
+	width: 100%;
+	margin: 0;
+}
+.login-form, .save-password, .login-buttons, .forgot-password, .social-logins {
+	max-width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.save-password{
+	margin-top: -20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: right;
+}
+.login-buttons{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.forgot-password{
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.forgot-password a{
+	color: white;
+	font-size: 12px;
+}
+
+.social-logins{
+	height: 130px;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+
+.social-logins button{
+	width: 250px;
+}
+
+.container{
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	width: 100%;
+	background: url('/assets/images/bg1.jpeg');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.content{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(7, 7, 20, 0.7);
+	/*display: flex;
+	align-items: center;
+	justify-content: center;*/
+	/*padding: 0px!important;
+	padding-top: 0px!important;*/
+}
+
+.logo-container{
+	background-color: transparent;
+	padding: 25px 85px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: absolute;
+	top: 0;
+}
+.links{
+	font-size: 15px;
+}
+.logo{
+	font-family: "Raleway";
+	font-size: 25px;
+	/*font-size: 3rem;*/
+	/*color: #E0F2F1;*/
+	font-weight: bold;
+	color: white;
+	cursor: pointer;
+}
+
+
+.accent-color{
+	color: #4adb95;	
+}
+.signup-button, button{
+	border-radius: 80px;
+	background-color: white;
+	color: black;
+	border: none;
+	font-weight: 300;
+	padding: 5px;
+}
+
+.form-container{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/deep/mat-form-field input:focus{
+	 /*height: 30px;*/
+	 color: white;
+}
+/deep/mat-form-field{
+	 color: white;
+}
+/deep/mat-form-field input{
+	 font-size: 27px;
+	 height: 20px;
+}
+
+.vishal-input{
+	width: 100%;
+	height: 40px;
+	margin: 5px;
+	border: 1px solid lightgrey;
+	background-color: transparent;
+	color: white;
+	border-radius: 40px;
+	padding-left: 30px;
+	margin-left: 15px;
+	margin-right: 15px;
+	font-size: 17px;
+	caret-color: white;
+}
+
+
+.vishal-input::placeholder{
+	color: lightgrey;
+}
+.vishal-input:focus{
+	outline: none;
+	border: 1px solid white;
+}
+
+.computer-display{
+	display: none;
+}
+.vicon{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	background-color: #4adb95;
+	border-radius: 50%;
+	margin-left: auto; margin-right: auto;
+}
+.vicon > span{
+	width: 35%;
+	height: 35%;
+	border-radius: 50%;
+	border: 5pt solid white;
+}
+
+@media screen and (max-width: 480px) {
+	.mobile-display{
+		display: none;
+	}
+	.logo-container{
+		justify-content: center;
+	}
+	.computer-display{
+		display: initial;
+	}
+}
+@media screen and (max-width: 786px) {
+	.container{
+		background-size: auto 100%;
+	}
+
+}

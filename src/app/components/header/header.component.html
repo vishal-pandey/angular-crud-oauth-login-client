@@ -1,0 +1,26 @@
+<header *ngIf="this.mS.isLoggedIn()">
+	<!-- <mat-toolbar class="status"><span class="v-f-r" *ngIf="this.mS.isLoggedIn()"><b>Username : </b>{{this.cokkie.get('username')}}</span></mat-toolbar> -->
+	<mat-toolbar class="header-toolbar">
+		<span class="fill" *ngIf="mobile"></span>
+		<h1 routerLink="/" *ngIf="mobile">Comp<span class="accent-color">any</span></h1>
+
+
+		<section class="desktop-menu" *ngIf="!mobile" style="margin-left: 300px;">
+			<h1 routerLink="/" style="color: white;">Comp<span class="accent-color">any</span></h1>
+		</section>
+		<span class="fill"></span>
+
+		<section class="desktop-menu" *ngIf="!mobile" style="display: none;">
+
+			<!-- <button mat-button>Home</button> -->
+			<button mat-button routerLink="/driver">Driver</button>
+			<button mat-button routerLink="/dispatcher">Dispatchers</button>
+			<button mat-button routerLink="/shipper">Shippers</button>
+			<!-- <button mat-button routerLink="/oems">OEMs</button> -->
+			<button mat-button routerLink="/update-account">Update My Account</button>
+			<button mat-button routerLink="/upgrade-licence">Upgrade My License</button>
+			<button mat-button (click)="this.mS.logout()" *ngIf="this.mS.isLoggedIn()">Logout</button>
+			<button mat-button *ngIf="!this.mS.isLoggedIn()" routerLink="/">Login</button>
+		</section>
+	</mat-toolbar>
+</header>

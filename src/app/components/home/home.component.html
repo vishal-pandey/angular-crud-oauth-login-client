@@ -1,0 +1,13 @@
+<section *ngIf="!this.mS.isLoggedIn()">
+	<app-login></app-login>
+</section>
+<section class="container">
+	<section class="content" *ngIf="this.mS.isLoggedIn()">
+		<h1>Welcome {{this.cookie.get('first_name')}} {{this.cookie.get('last_name')}}</h1>
+		<div class="user-details">
+			<span><b>Username : </b> <span>{{this.cookie.get('username')}}</span></span>
+			<span><b>Email : </b> <span>{{this.cookie.get('email')}}</span></span>
+			<span><b>UserId : </b> <span>{{this.cookie.get('id')}}</span></span>
+		</div>
+	</section>
+</section>

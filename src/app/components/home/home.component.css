@@ -1,0 +1,27 @@
+.container{
+	width: 100%;
+	background-color: rgb(244, 246, 249);
+	background: url('/assets/images/pattern.png');
+}
+.content{
+	min-height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1024px;
+/*	padding: 15px;
+	padding-top: 20px;*/
+	background-color: transparent;
+	box-shadow: 2px 0px 2px grey
+				-2px 0px 2px grey;
+	
+	border-left: 1px solid rgba(111,111,111,0.1);
+	border-right: 1px solid rgba(111,111,111,0.1);
+	background: url('/assets/images/pattern.png');
+	text-align: justify;
+}
+.user-details{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
